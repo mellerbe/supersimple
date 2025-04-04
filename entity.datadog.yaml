@@ -2,7 +2,7 @@ apiVersion: v3
 kind: system
 metadata:
   name: supersimple
-  displayName: My supersimple app
+  displayName: SuperSimple
   tags:
     - owner:smedley
   links:
