@@ -1,0 +1,30 @@
+apiVersion: v3
+kind: system
+metadata:
+  name: supersimple-2
+  displayName: SuperSimple-2
+  tags:
+    - owner:smedley
+  links:
+    - name: supersimple runbook
+      type: runbook
+      url: http://animals3.localhost
+    - name: supersimple source code
+      provider: github
+      url: https://github.com/mellerbe/supersimple
+      type: repo
+  contacts:
+    - name: Support Email
+      type: email
+      contact: simpleton@supersimple.demo
+    - name: Support Slack
+      type: slack
+      contact: https://www.slack.com/archives/shopping-cart
+  owner: uberteam
+  additionalOwners:
+    - name: opsTeam
+      type: operator
+spec:
+  components:
+    - service:animals-2
+    - service:listing-cats
