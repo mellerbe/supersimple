@@ -1,0 +1,49 @@
+apiVersion: v3
+kind: system
+metadata:
+  name: supersimple
+  displayName: My supersimple app
+  tags:
+    - owner:smedley
+  links:
+    - name: supersimple runbook
+      type: runbook
+      url: http://animals3.localhost
+    - name: supersimple source code
+      provider: github
+      url: https://github.com/mellerbe/supersimple
+      type: repo
+  contacts:
+    - name: Support Email
+      type: email
+      contact: simpleton@supersimple.demo
+    - name: Support Slack
+      type: slack
+      contact: https://www.slack.com/archives/shopping-cart
+  owner: uberteam
+  additionalOwners:
+    - name: opsTeam
+      type: operator
+spec:
+  components:
+    - service:animals-2
+    - service:listing-cats
+datadog:
+  codeLocations:
+    - repositoryURL: https://github.com/mellerbe/supersimple
+      paths:
+        - ./**
+  events:
+    - name: "deployment events"
+      query: "app:myapp AND type:github"
+    - name: "event type B"
+      query: "app:myapp AND type:github"
+  logs:
+    - name: "critical logs"
+      query: "app:supersimple AND type:github"
+    - name: "ops logs"
+      query: "app:supersimple"
+  pipelines:
+    fingerprints:
+      - fp1
+      - fp2
