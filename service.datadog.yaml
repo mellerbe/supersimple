@@ -9,7 +9,7 @@ metadata:
     - name: supersimple runbook
       type: runbook
       url: http://animals3.localhost
-    - name: supersimple source code
+    - name: supersimple-source-code
       provider: github
       url: https://github.com/mellerbe/supersimple
       type: repo
