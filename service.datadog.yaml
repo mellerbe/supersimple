@@ -1,30 +1,22 @@
-apiVersion: v3
-kind: system
-metadata:
-  name: supersimple-2
-  displayName: SuperSimple-2
-  tags:
-    - owner:smedley
-  links:
-    - name: supersimple runbook
-      type: runbook
-      url: http://animals3.localhost
-    - name: supersimple-source-code
-      provider: github
-      url: https://github.com/mellerbe/supersimple
-      type: repo
-  contacts:
-    - name: Support Email
-      type: email
-      contact: simpleton@supersimple.demo
-    - name: Support Slack
-      type: slack
-      contact: https://www.slack.com/archives/shopping-cart
-  owner: uberteam
-  additionalOwners:
-    - name: opsTeam
-      type: operator
-spec:
-  components:
-    - service:animals-2
-    - service:listing-cats
+    schema-version: v2.2
+    dd-service: supersimple-2.2
+    team: smedly
+    lifecycle: prod
+    application: simple-app
+    description: very simple web app
+    tier: "2"
+    type: web
+    contacts:
+    - type: slack
+    contact: https://datadogincidents.slack.com/archives/XXXXX
+    links:
+    - name: Common Operations
+    type: runbook
+    url: http://animals3.localhost
+    - name: Disabling Deployments
+    type: runbook
+    url: https://datadoghq.atlassian.net/wiki/
+    tags: [owner:dudley]
+    integrations:
+
+   
