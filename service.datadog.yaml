@@ -1,22 +1,18 @@
     schema-version: v2.2
     dd-service: supersimple-2.2
     team: smedly
-    lifecycle: prod
     application: simple-app
-    description: very simple web app
     tier: "2"
     type: web
     contacts:
-    - type: slack
-    contact: https://datadogincidents.slack.com/archives/XXXXX
+      - type: slack
+        contact: https://datadogincidents.slack.com/archives/XXXXX
     links:
-    - name: Common Operations
-    type: runbook
-    url: http://animals3.localhost
-    - name: Disabling Deployments
-    type: runbook
-    url: https://datadoghq.atlassian.net/wiki/
-    tags: [owner:dudley]
-    integrations:
-
-   
+      - name: Common Operations
+        type: runbook
+        url: http://animals3.localhost
+      - name: Disabling Deployments
+        type: runbook
+        url: https://datadoghq.atlassian.net/wiki/
+    tags: 
+      - owner:dudley
